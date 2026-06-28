@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sistema de Control de Acceso</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #081b33,
+        #123d63,
+        #020b16
+    );
+
+}
+
+
+
+/* EFECTO DE FONDO */
+
+body::before{
+
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+
+    background:rgba(0,180,255,0.15);
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+}
+
+
+
+/* TARJETA LOGIN */
+
+.login-container{
+
+    position:relative;
+
+    width:380px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,0.95);
+
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.4);
+
+    text-align:center;
+
+}
+
+
+
+/* LOGO */
+
+.logo{
+
+    width:180px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+/* TITULO */
+
+h1{
+
+    color:#123d63;
+
+    font-size:24px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* CAMPOS */
+
+.input-box{
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+}
+
+
+label{
+
+    color:#333;
+
+    font-weight:bold;
+
+}
+
+
+input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+
+
+input:focus{
+
+    border-color:#123d63;
+
+    box-shadow:0 0 8px rgba(18,61,99,0.4);
+
+}
+
+
+
+/* BOTON */
+
+button{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #123d63,
+        #020b16
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+
+/* PIE */
+
+.footer{
+
+    margin-top:20px;
+
+    font-size:13px;
+
+    color:#666;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="login-container">
+
+
+    <img 
+    src="/static/elementos/logo.png"
+    class="logo"
+    >
+
+
+    <h1>
+        Acceso al Sistema
+    </h1>
+
+
+    <form method="POST">
+
+
+        <div class="input-box">
+
+            <label>
+                Usuario
+            </label>
+
+            <input 
+            type="text" 
+            name="usuario"
+            placeholder="Ingrese su usuario"
+            required>
+
+        </div>
+
+
+
+        <div class="input-box">
+
+            <label>
+                Contraseña
+            </label>
+
+            <input 
+            type="password" 
+            name="password"
+            placeholder="Ingrese su contraseña"
+            required>
+
+        </div>
+
+
+
+        <button type="submit">
+            Ingresar
+        </button>
+
+
+    </form>
+
+
+
+    <div class="footer">
+
+        Sistema de Control de Acceso Universitario
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
